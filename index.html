@@ -34,13 +34,21 @@
   .review-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
   .rcard{
     border:1px solid var(--line); background:var(--card); border-radius:10px;
-    padding:24px; display:flex; flex-direction:column; gap:12px;
+    overflow:hidden; display:flex; flex-direction:column; gap:12px;
     box-shadow:0 1px 2px rgba(28,26,23,.03);
   }
+  .rcard-body{padding:20px 24px 24px; display:flex; flex-direction:column; gap:12px}
+  .rcard-art{
+    height:150px; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,var(--art-a,#f1ece2),var(--art-b,#e3ddd2));
+  }
+  .rcard-art svg{width:64px; height:64px; stroke:var(--ink); stroke-width:1.4; fill:none}
   .rcard .cat-tag{font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:700}
   .rcard h3{font-size:19px; font-weight:800; letter-spacing:-0.01em}
   .rcard .verdict{font-size:13px; font-weight:700; color:var(--ink); background:#f1ece2; display:inline-block; padding:3px 10px; border-radius:20px; width:fit-content}
   .rcard p{font-size:14.5px; color:var(--muted); line-height:1.65}
+  .rcard .alt{font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:12px; margin-top:2px}
+  .rcard .alt b{color:var(--ink)}
   .rcard .buy{
     margin-top:auto; display:inline-block; text-align:center; text-decoration:none;
     background:var(--ink); color:#fff; padding:11px 18px; border-radius:6px;
@@ -83,43 +91,87 @@
     <div class="review-grid">
 
       <div class="rcard">
+        <div class="rcard-art" style="--art-a:#f3e7dc;--art-b:#e7d4c1"><svg viewBox="0 0 24 24"><rect x="2" y="9" width="20" height="10" rx="1.5"/><line x1="6" y1="9" x2="6" y2="19"/><line x1="10" y1="9" x2="10" y2="19"/><line x1="14" y1="9" x2="14" y2="19"/><line x1="18" y1="9" x2="18" y2="19"/><circle cx="7" cy="5" r="2"/><circle cx="17" cy="5" r="2"/></svg></div>
+        <div class="rcard-body">
         <span class="cat-tag">Synths &amp; Sound Design</span>
         <h3>Arturia MicroFreak</h3>
         <span class="verdict">Editor's Choice pick, 2026</span>
         <p>The standout budget hardware synth in this year's roundups — not because it's cheap, but because of how much genuine sound variety it packs in. Seventeen oscillator modes and real knobs under your fingers mean you're learning synthesis by turning things, not digging through menus. The kind of instrument that makes you better at sound design, not just a preset browser.</p>
+        <div class="alt"><b>Want a full keybed instead?</b> The Korg Minilogue XD adds true four-voice polyphony and a conventional keyboard — the stronger long-term instrument if you want one box to grow with, not just experiment on.</div>
         <a class="buy" href="https://www.amazon.co.uk/s?k=Arturia+MicroFreak&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
       </div>
 
       <div class="rcard">
+        <div class="rcard-art" style="--art-a:#e4ece9;--art-b:#cfe0da"><svg viewBox="0 0 24 24"><path d="M4 9h4l6-5v16l-6-5H4z"/><path d="M16 8a5 5 0 0 1 0 8"/><path d="M19 5a9 9 0 0 1 0 14"/></svg></div>
+        <div class="rcard-body">
         <span class="cat-tag">Studio Monitors</span>
         <h3>IK Multimedia iLoud Micro Monitor</h3>
         <span class="verdict">Top pick for small rooms, 2026</span>
         <p>Consistently the top recommendation for bedroom and desk setups this year. Built-in DSP room correction and a genuinely flat response, in a cabinet barely taller than a mug — sized so it actually fits a real desk without needing room treatment to trust what you're hearing.</p>
+        <div class="alt"><b>On a tighter budget?</b> The Edifier MR4 gets you a genuinely flat reference response and a real wood cabinet for well under half the price — the honest starting point rather than the long-term reference pair.</div>
         <a class="buy" href="https://www.amazon.co.uk/s?k=IK+Multimedia+iLoud+Micro+Monitor&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
       </div>
 
       <div class="rcard">
+        <div class="rcard-art" style="--art-a:#eee6f2;--art-b:#ddcce6"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="9" rx="1.5"/><line x1="6.5" y1="4" x2="6.5" y2="13"/><line x1="11" y1="4" x2="11" y2="13"/><line x1="15.5" y1="4" x2="15.5" y2="13"/><line x1="20" y1="4" x2="20" y2="13"/><rect x="3" y="16" width="4" height="4" rx="0.5"/><rect x="9" y="16" width="4" height="4" rx="0.5"/><rect x="15" y="16" width="4" height="4" rx="0.5"/></svg></div>
+        <div class="rcard-body">
         <span class="cat-tag">MIDI Controllers</span>
         <h3>Akai MPK Mini</h3>
         <span class="verdict">Most-recommended budget pick, 2026</span>
         <p>The single most recommended budget MIDI controller across nearly every current buying guide. Compact, proven, and universally compatible — the reason it's still the default first controller years after launch is that it just works, every time, with everything.</p>
+        <div class="alt"><b>More into sound design than pads?</b> The Arturia MiniLab 3 adds aftertouch for expressive playing and ships with 500+ presets — buy this instead if you care more about exploring sounds than finger drumming.</div>
         <a class="buy" href="https://www.amazon.co.uk/s?k=Akai+MPK+Mini&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
       </div>
 
       <div class="rcard">
+        <div class="rcard-art" style="--art-a:#e3eaf1;--art-b:#ccdaea"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="12" r="2"/><circle cx="17" cy="12" r="2"/><path d="M10.5 12h3"/></svg></div>
+        <div class="rcard-body">
         <span class="cat-tag">Interfaces</span>
         <h3>Focusrite Scarlett 2i2 (4th Gen)</h3>
         <span class="verdict">Default first-interface pick</span>
         <p>The default first-interface recommendation across production forums for over a decade, and the 4th generation is the version reviewers point beginners toward in 2026. Redesigned preamps, an Air mode borrowed from much pricier hardware, and a genuine 120dB dynamic range on the converters.</p>
+        <div class="alt"><b>Want studio-grade preamps for less?</b> The Audient iD4 MkII uses the same preamp design found in Audient's much more expensive studio hardware, at a genuinely beginner-friendly price.</div>
         <a class="buy" href="https://www.amazon.co.uk/s?k=Focusrite+Scarlett+2i2+4th+Gen&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
       </div>
 
       <div class="rcard">
+        <div class="rcard-art" style="--art-a:#f2e6e6;--art-b:#e6cfcf"><svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2" y="13" width="4" height="6" rx="1.5"/><rect x="18" y="13" width="4" height="6" rx="1.5"/></svg></div>
+        <div class="rcard-body">
         <span class="cat-tag">Studio Headphones</span>
         <h3>Audio-Technica ATH-M20x</h3>
         <span class="verdict">Trusted entry point, 2026</span>
         <p>The entry-level pair reviewers actually trust rather than just tolerate. Honest, comfortable for long sessions, and clean enough that it won't lie to you about your mix — a genuine starting point rather than a compromise you'll want to replace in a month.</p>
+        <div class="alt"><b>Ready to invest a bit more?</b> The Beyerdynamic DT 770 PRO has been the default closed-back recommendation in professional studios for more than two decades — buy once, cry once.</div>
         <a class="buy" href="https://www.amazon.co.uk/s?k=Audio-Technica+ATH-M20x&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-art" style="--art-a:#eaeee0;--art-b:#d7dfc4"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="7" cy="9" r="1.6"/><circle cx="12" cy="9" r="1.6"/><circle cx="17" cy="9" r="1.6"/><circle cx="7" cy="15" r="1.6"/><circle cx="12" cy="15" r="1.6"/><circle cx="17" cy="15" r="1.6"/></svg></div>
+        <div class="rcard-body">
+        <span class="cat-tag">Grooveboxes &amp; Drum Machines</span>
+        <h3>Korg Volca Beats</h3>
+        <span class="verdict">Long-standing analog favorite</span>
+        <p>The Volca line has been the go-to entry into real analog drum sound for years running, and Beats is still the reason why — a battery-powered box with genuine analog circuits behind the kick and snare, not samples pretending to be one. Small enough to bring anywhere, real enough to actually shape sound on.</p>
+        <div class="alt"><b>Want an all-in-one beginner rig?</b> The Akai MPC Sample bundles a built-in speaker, a mic for sampling, and 60 free Melodics lessons — buy this instead if you want everything in one box from day one.</div>
+        <a class="buy" href="https://www.amazon.co.uk/s?k=Korg+Volca+Beats&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-art" style="--art-a:#e6ece9;--art-b:#cfe0d8"><svg viewBox="0 0 24 24"><circle cx="4" cy="6" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 6c4 0 2 6 6 6s2 6 6 6"/></svg></div>
+        <div class="rcard-body">
+        <span class="cat-tag">Cables</span>
+        <h3>Mogami Gold Studio XLR Cable</h3>
+        <span class="verdict">Professional studio standard</span>
+        <p>The cable working engineers reach for when a session actually matters. Four-conductor construction with a proper spiral shield keeps noise out over long runs, and it's the kind of build quality that outlasts the gear it's plugged into — the boring, correct answer to "which cable" that never needs revisiting.</p>
+        <div class="alt"><b>Just need something that works, cheap?</b> The Amazon Basics XLR Microphone Cable is the honest budget option — buy this instead if you're testing a signal chain, not running a real session.</div>
+        <a class="buy" href="https://www.amazon.co.uk/s?k=Mogami+Gold+Studio+XLR+Cable&tag=YOUR-AMAZON-TAG" target="_blank" rel="nofollow sponsored">Check price on Amazon</a>
+        </div>
       </div>
 
     </div>
